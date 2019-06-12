@@ -16,7 +16,7 @@ class DataInitializer(val repository: NotesRepository) : ApplicationRunner {
 
     override fun run(args: ApplicationArguments?) {
         listOf("Note 1", "Note 2", "Note 3").forEach {
-            repository.save(Note(text=it, user = "User"))
+            repository.save(Note(text=it, user = "user"))
         }
 
         repository.findAll().forEach {

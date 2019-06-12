@@ -30,15 +30,16 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-rest")
     implementation("org.springframework.boot:spring-boot-starter-hateoas")
     implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springframework.data:spring-data-rest-hal-browser")
-
+    implementation("org.springframework.boot:spring-boot-starter-security")
     //implementation("com.okta.spring:okta-spring-boot-starter:1.2.1")
-    implementation("de.codecentric:spring-boot-admin-starter-client")
-    implementation("de.codecentric:spring-boot-admin-starter-server")
 
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+
+    implementation("org.springframework.data:spring-data-rest-hal-browser")
+    implementation("de.codecentric:spring-boot-admin-starter-client")
+    implementation("de.codecentric:spring-boot-admin-starter-server")
 
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     testImplementation("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
