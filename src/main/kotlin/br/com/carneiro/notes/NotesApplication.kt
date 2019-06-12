@@ -15,12 +15,16 @@ class NotesApplication
 class DataInitializer(val repository: NotesRepository) : ApplicationRunner {
 
     override fun run(args: ApplicationArguments?) {
-        listOf("Note 1", "Note 2", "Note 3").forEach {
-            repository.save(Note(text=it, user = "user"))
+        var notes = repository.findAll()
+        if (notes.isEmpty()) {
+            notes = mutableListOf<Note>()
+            listOf("Note 1", "Note 2", "Note 3").forEach {
+                notes.add(repository.save(Note(text = it, user = "user")))
+            }
         }
 
-        repository.findAll().forEach {
-            println(">> $it")
+        notes.forEach {
+            println(">> On init from MongoDB: $it")
         }
     }
 
