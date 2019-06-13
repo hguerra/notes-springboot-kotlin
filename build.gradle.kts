@@ -31,7 +31,8 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-hateoas")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-security")
-    //implementation("com.okta.spring:okta-spring-boot-starter:1.2.1")
+
+    implementation("com.okta.spring:okta-spring-boot-starter:1.2.1")
 
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")

@@ -14,7 +14,9 @@ class SecurityConfiguration : WebSecurityConfigurerAdapter() {
             .authorizeRequests()
             .anyRequest().authenticated()
             .and()
-            .formLogin().permitAll()
+            .oauth2Client()
+            .and()
+            .oauth2Login()
     }
 
 }
